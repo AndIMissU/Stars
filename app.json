@@ -1,12 +1,46 @@
 {
-  "pages":[
+  "pages": [
+    "pages/me/myPush/myPush",
+    "pages/me/me",
+    "pages/main/main",
+    "pages/message/myMessage/myMessage",
+    "pages/message/starsInfo/starsInfo",
+    "pages/message/message",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/me/wallet/wallet"
+    
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
-  }
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "white",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#14b392",
+    "borderStyle": "#dddee0",
+    "backgroundColor": "white",
+    "color": "gray",
+    "list": [
+      {
+        "text": "星球",
+        "pagePath": "pages/main/main",
+        "iconPath": "images/stars.png",
+        "selectedIconPath": "images/stars_sel.png"
+      },
+      {
+        "text": "动态",
+        "pagePath": "pages/message/message",
+        "iconPath": "images/message.png",
+        "selectedIconPath": "images/message_sel.png"
+      },
+      {
+        "text": "我",
+        "pagePath": "pages/me/me",
+        "iconPath": "images/me.png",
+        "selectedIconPath": "images/me_sel.png"
+      }
+    ]
+  },
+  "debug": false
 }

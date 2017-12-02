@@ -1,10 +1,11 @@
-/**app.wxss**/
-.container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 200rpx 0;
-  box-sizing: border-box;
-} 
+body,page{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #f5f6f8;
+}
+image{ 
+    width: 100%;
+    height: 100%;
+}
