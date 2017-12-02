@@ -1,0 +1,12 @@
+.container{
+    margin: auto;
+    width: 714rpx;
+    height: 100vh;
+    border-top: 1rpx solid #dddee0;
+}
+.nomessage_image {
+    margin: auto;
+    margin-top: 494rpx;
+    width: 165rpx;
+    height: 182rpx;
+}

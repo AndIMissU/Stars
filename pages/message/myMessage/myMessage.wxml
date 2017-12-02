@@ -1,0 +1,5 @@
+<view class="container">
+    <view class="nomessage_image">
+        <image src="../../../images/cup.png" />
+    </view>
+</view>
