@@ -10,7 +10,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "1.6.6",
 	"appid": "wx4a378e7418adaeca",
-	"projectname": "KnoStars",
+	"projectname": "star",
 	"condition": {
 		"search": {
 			"current": -1,

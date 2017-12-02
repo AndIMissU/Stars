@@ -22,10 +22,25 @@ Page({
   },
   swipertab: function(e){
     var type = e.detail.current;
-    console.log(type);
     this.setData({
       activeIndex:type
     });
+  },
+  /**
+   * 跳转到到知识星球简介页面
+   */
+  tostarsInfo: function(e) {
+    wx.navigateTo({
+      url:'../message/starsInfo/starsInfo'
+    })
+  },
+  /**
+   * 跳转到与我相关页面
+   */
+  toMyMessage: function(e) {
+    wx.navigateTo({
+      url:'../message/myMessage/myMessage'
+    })
   },
 
   /**

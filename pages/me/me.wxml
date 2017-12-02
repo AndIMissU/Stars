@@ -1,1 +1,46 @@
-<text>hahahha</text>
+<view class="container">
+    <view class="page-hd">
+        <view class="page-hd-info">
+            <view class="page-hd-border">
+                <view class="page-hd__pic"><image src="../../images/pic.jpg"/></view>
+            </view> 
+            <view class="page-hd__name">哈哈哈</view>
+            <view class="page-hd_mythings">
+                <view class="mythings_push" bindtap="tomyPush">
+                    <view class="mythings_num">1</view>
+                    <view class="mythings_text">我的发表</view></view>
+                <view class="mythings_collect">
+                    <view class="mythings_num">0</view> 
+                    <view class="mythings_text">我的收藏</view></view>
+            </view>
+        </view>
+    </view>
+    <view class="page-bd">
+        <view class="page-bd-items">
+            <view class="bd-item" bindtap="toWallet">
+                <image src="../../images/wallet.png" />
+                <view class="bd-item-info">钱包</view>
+            </view>
+        </view>
+        <view class="page-bd-items">
+            <view class="bd-item">
+                <image src="../../images/settings.png" />
+                <view class="bd-item-info">设置</view>
+            </view>
+            <view class="bd-item">
+                <image src="../../images/help.png" />
+                <view class="bd-item-info">帮助与反馈</view>
+            </view>
+        </view>
+        <view class="page-bd-items">
+            <view class="bd-item">
+                <image src="../../images/email.png" />
+                <view class="bd-item-info">邀请码</view>
+            </view>
+            <view class="bd-item">
+                <image src="../../images/rank.png" />
+                <view class="bd-item-info">活跃星球排行榜</view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,1 +1,13 @@
-<text>🐷</text>
+<view class="container">
+    <view class="page__hd center">
+        <navigator>
+            <view class="page__hd_search center">
+                <image src="../../images/search.png" />
+                搜索星球或内容
+            </view>
+        </navigator>
+    </view>
+    <view class="page__bd">
+        
+    </view>
+</view>

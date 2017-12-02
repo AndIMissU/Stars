@@ -9,8 +9,25 @@ Page({
   },
 
   /**
+   * 跳转到我的发表页面
+   */
+  tomyPush:function(e) {
+    wx.navigateTo({
+      url:'myPush/myPush'
+    })
+  },
+  /**
+   * 跳转到钱包页面
+   */
+  toWallet: function(e) {
+    wx.navigateTo({
+      url:'wallet/wallet'
+    })
+  },
+  /**
    * 生命周期函数--监听页面加载
    */
+  
   onLoad: function (options) {
   
   },

@@ -1,7 +1,137 @@
-body,page{
-    margin: 0;
-    padding: 0;
+.container {
     width: 100%;
     height: 100vh;
-    background-color: #f5f5f5;
+}
+.page-hd {
+    width: 100%;
+    height: 469rpx;
+    background: white;
+}
+.page-hd-info{
+    margin: auto;
+    width: 480rpx;
+    height: 469rpx;
+    background: white;
+}
+.page-hd__pic {
+    margin: auto;
+    width: 152.7rpx;
+    height: 152.7rpx;
+}
+
+.page-hd__pic image {
+    width: 152.7rpx;
+    height: 152.7rpx;
+    border-radius: 76.4rpx;
+    /* margin-top: 30rpx; */
+    margin-top: 40rpx;
+    /* margin-left:  */
+}
+.page-hd-border {
+    margin: auto;
+    width: 240rpx;
+    height: 240rpx;
+    border: 1px solid #ebecee;
+    border-radius: 120rpx;
+}
+.page-hd-border:before {
+    content: '';
+    position: absolute;
+    margin: auto;
+    width: 200rpx;
+    height: 200rpx;
+    border: 1px solid #ebecee;
+    border-radius: 100rpx;
+    margin-left:18rpx;
+    margin-top: 18rpx;
+}
+.page-hd-border:after {
+    content: '';
+    position: absolute;
+    margin: auto;
+    width: 170rpx;
+    height: 170rpx;
+    border: 1px solid #ebecee;
+    border-radius: 85rpx;
+    margin-left:33rpx;
+    margin-top: -122rpx;
+}
+.page-hd__name{
+    width: 100%;
+    margin-top: 40rpx;
+    font-size: 30rpx;
+    font-weight: 800;
+    text-align: center;
+}
+.page-hd_mythings {
+    width: 480rpx;
+    margin-top: 20rpx;
+}
+.mythings_push {
+    text-align: center;
+    width: 240rpx;
+    float: left;
+}
+.mythings_collect {
+    text-align: center;
+    float: left;
+    width: 240rpx;
+}
+.mythings_num {
+    font-size: 30rpx;
+    font-weight: 800;
+}
+.mythings_text {
+    font-size: 28rpx;
+    color: gray;
+}
+.mythings_push:after {
+    content: '';
+    position: absolute;
+    border-right: 2rpx solid #edecee;
+    height: 50rpx;
+    width: 20rpx;
+    margin-top: -50rpx;
+    margin-left: 100rpx;
+}
+.page-bd {
+    width: 100%;
+    height: 615rpx;
+    /* background: red; */
+}
+.page-bd-items {
+    margin-top: 20rpx;
+    background: white;
+}
+.bd-item{
+    width: 100%;
+    position: relative;
+    height: 113rpx;
+    /* line-height: 113rpx; */
+}
+.bd-item-info{
+    /* position: absolute; */
+    margin-top: -65rpx;
+    margin-left: 120rpx;
+    font-size: 36rpx;
+}
+.bd-item image {
+    width: 60rpx;
+    height: 60rpx;
+    margin-left: 47rpx;
+    margin-top: 30rpx;
+}
+.bd-item text {
+    margin-top: -100rpx;
+}
+.bd-item:before {
+    content: '';
+    position: absolute;
+    width: 15rpx;
+    height: 15rpx;
+    border-right: 2px solid #ecedee;
+    border-top: 2px solid #ecedee;
+    margin-top: 49rpx;
+    margin-left: 680rpx;
+    transform: rotate(45deg);
 }

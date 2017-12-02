@@ -11,12 +11,12 @@
                 <view class="swiper-item-image"><image src="../../images/nomessage.png"/></view>
                 <view class="swiper-item-title"><p>消息通知</p></view>
                 <view class="swiper-item-info">用知识星球，连接一千位铁杆粉丝你的消息精准送达</view>
-                <view class="swiper-item-btn"><button>了解我们</button></view>
+                <view class="swiper-item-btn"><button bindtap="tostarsInfo">了解我们</button></view>
             </view> 
           </swiper-item>
           <swiper-item>
               <view class="swiper-item weui-tab__content">
-                <view class="swiper-item_connecthand">
+                <view class="swiper-item_connecthand" bindtap="toMyMessage">
                     <view class="swiper-item_connecthand__image"><image src="../../images/hand.png"/></view>
                     <view class="swiper-item_connecthand__text">与我相关</view>
                 </view>
@@ -24,7 +24,11 @@
             </swiper-item>
             <swiper-item>
                 <view class="swiper-item weui-tab__content">
-                    <text>🐶</text>
+                    <view class="swiper-item_selfmessage">
+                        <view class="swiper-item_selfmessage__image">
+                            <image src="../../images/cup.png"/>
+                        </view>
+                    </view>
                 </view> 
               </swiper-item>
     </swiper>
