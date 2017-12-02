@@ -1,0 +1,20 @@
+<view class="container">
+    <view class="page-hd">
+        <view class="page-hd-info">
+            <view class="page-hd__pic"><image src="../../../images/pic.jpg"/></view>
+            <view class="page-hd__name">哈哈哈</view>
+        </view>
+        <view class="page-hd_mytopic">我的主题</view>
+    </view>
+    <view class="page-bd">
+        <view class="page-bd-items">
+            <view class="page-bd-item">
+                <view class="page-bd-items__title">创建了星球[哈哈哈]</view>
+                <view class="page-bd-item__info">
+                    <view class="page-bd-item__info-user">哈哈哈</view>
+                    <view class="page-bd-item__info-date">2017/11/27</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
