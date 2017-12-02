@@ -1,0 +1,16 @@
+.container {
+    border-top: 1px solid #dddee0;
+    margin: auto;
+    width: 680rpx;
+}
+.container-info {
+    margin-top: 30rpx;
+}
+.container-info_title{
+    color: #14B98F;
+}
+.container-info_text view {
+    color: #b7b7b7;
+    font-size: 32rpx;
+    margin-top: 20rpx;
+}

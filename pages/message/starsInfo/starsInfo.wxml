@@ -1,0 +1,37 @@
+<view class="container">
+    <view class="container-info">
+        <view class="container-info_title">知识星球是什么？</view>
+        <view class="container-info_text">
+            <view>知识星球是创业者连接铁杆粉丝，做出高品质社群，实现知识变现的工具。</view>
+        </view>
+    </view>
+    <view class="container-info">
+        <view class="container-info_title">你们为什么做知识星球？</view>
+        <view class="container-info_text">
+            <view>我们公司叫大成天下，之前做了十年的信息安全。转战移动互联网后，我们发现不少品牌的大V需要社群工具解决收费难、内容沉淀难的问题，于是做了知识星球。</view>
+            <view>凯文·凯利提出过「一千位铁杆粉丝」的观点：任何从事创作或艺术的人，例如艺术家、音乐家、摄影师、工匠、演员、动画师、设计师、作家等，只要能够获得一千位铁杆粉丝，就足够生计无忧，自由创作。</view>
+            <view>用知识星球，创作者可以站着把钱挣了，品牌可以更好的连接用户。这是一件值得我们再做十年的事，你觉得呢？</view> 
+        </view>
+    </view>
+    <view class="container-info">
+        <view class="container-info_title">谁会是知识星球合适的用户？</view>
+        <view class="container-info_text">
+            <view>我们的用户可能是自媒体的大中小V们，可能事某些方面的意见领袖，也可能是一家公司、一个品牌、一款游戏、一部电影......他们形成了一个小圈子，有共同的爱好，有互动的欲望，在一起，就能创造出更大的价值。</view>
+        </view>
+    </view>
+    <view class="container-info">
+        <view class="container-info_title">知识星球能带来什么好处？</view>
+        <view class="container-info_text">
+            <view>1.更方便地聚集铁杆粉丝做轻松和纯粹的讨论；</view>
+            <view>2.更快捷地挣到合理的收入。</view>
+            <view>用知识星球，用户可以更近距离地和偶像、同好交流。</view>
+            <view>现在的知识星球里，有科技圈、摄影圈、教育圈、金融圈、音乐圈等诸多领域的朋友入住了，欢迎你也来。</view>
+        </view>
+    </view>
+    <view class="container-info">
+        <view class="container-info_title">知识星球的含义是什么？</view>
+        <view class="container-info_text">
+            <view>我们希望每个内容创造者都能创建自己的星球，将知识散步到星球的每一个角落。</view>
+        </view>
+    </view>
+</view>
