@@ -23,9 +23,7 @@
     width: 152.7rpx;
     height: 152.7rpx;
     border-radius: 76.4rpx;
-    /* margin-top: 30rpx; */
     margin-top: 40rpx;
-    /* margin-left:  */
 }
 .page-hd-border {
     margin: auto;
@@ -97,7 +95,6 @@
 .page-bd {
     width: 100%;
     height: 615rpx;
-    /* background: red; */
 }
 .page-bd-items {
     margin-top: 20rpx;
@@ -107,10 +104,8 @@
     width: 100%;
     position: relative;
     height: 113rpx;
-    /* line-height: 113rpx; */
 }
 .bd-item-info{
-    /* position: absolute; */
     margin-top: -65rpx;
     margin-left: 120rpx;
     font-size: 36rpx;
