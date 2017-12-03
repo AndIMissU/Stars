@@ -1,14 +1,17 @@
 {
   "pages": [
+    "pages/index/index",
+    "pages/main/createStars/createStars",
+    "pages/main/main",
+    
+
+    
+    "pages/me/wallet/wallet",
     "pages/me/myPush/myPush",
     "pages/me/me",
-    "pages/main/main",
     "pages/message/myMessage/myMessage",
     "pages/message/starsInfo/starsInfo",
-    "pages/message/message",
-    "pages/index/index",
-    "pages/me/wallet/wallet"
-    
+    "pages/message/message"
   ],
   "window": {
     "backgroundTextStyle": "light",
