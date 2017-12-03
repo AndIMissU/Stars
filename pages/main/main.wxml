@@ -8,6 +8,16 @@
         </navigator>
     </view>
     <view class="page__bd">
+        <block>
+            <view class="page_bd_stars">
+                <image src="../../images/stars1.png"></image>
+                <view class="page_bd_starsName">哈哈哈</view>
+                <view class="page_bd_starsUser">哈哈哈</view>
+            </view>
+        </block>
+        <view class="page__bd-create" bindtap="toCreateStar">  
+            <view class="page__bd-create-text">创建星球</view>
+        </view>
         
     </view>
 </view>

@@ -1,0 +1,9 @@
+<view class="container">
+    <view class="page-title">
+        <view class="page-title__title">创建免费星球</view>
+        <view class="page-title__finish" bindtap="toMain">完成</view>
+    </view>
+    <view class="page-hd"></view>
+    <view class="page-bd"></view>
+    <view class="page-ft"></view>
+</view>

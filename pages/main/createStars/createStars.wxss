@@ -1,0 +1,22 @@
+.container {
+    widows: 100%;
+    height: 100vh;
+}
+.page-title {
+    margin: auto;
+    width: 714rpx;
+    height: 93rpx;
+    border-bottom: 1px solid #edecee;
+}
+.page-title__title {
+    text-indent: 265rpx;
+    float: left;
+    font-size: 32rpx;
+    line-height: 93rpx;
+}
+.page-title__finish {
+    line-height: 93rpx;
+    font-size: 32rpx;
+    text-indent: 170rpx;
+    color: #14b392;
+}

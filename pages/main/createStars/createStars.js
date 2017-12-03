@@ -1,12 +1,20 @@
-// pages/main/main.js
+// pages/main/creatStars/createStars.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+  
   },
-
+  /**
+   * 完成创建 跳转到主页面
+   */
+  toMain: function(e) {
+    wx.navigateTo({
+      url:'../main'
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -14,14 +22,6 @@ Page({
   
   },
 
-  /**
-   * 跳转到 创建星球页面
-   */
-  toCreateStar: function(e) {
-    wx.navigateTo({
-      url:'createStars/createStars'
-    })
-  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
