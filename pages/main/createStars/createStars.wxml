@@ -3,7 +3,24 @@
         <view class="page-title__title">创建免费星球</view>
         <view class="page-title__finish" bindtap="toMain">完成</view>
     </view>
-    <view class="page-hd"></view>
-    <view class="page-bd"></view>
-    <view class="page-ft"></view>
+    <view class="page-hd">
+        <view class="page-hd__star"><image src="../../../images/stars2.png"/></view>
+        <view class="page-hd__text"><input type="text" value="星球名字"/></view>
+    </view>
+    <view class="page-bd">
+        <view class="page-bd__text">选择所属星球类别(必选)</view>
+        <view class="page-bd__choose">
+            <view class="page-bd__choosebtn">文艺</view>
+            <view class="page-bd__choosebtn">科技</view>
+            <view class="page-bd__choosebtn">时尚</view>
+            <view class="page-bd__choosebtn">娱乐</view>
+            <view class="page-bd__choosebtn">经济</view>
+            <view class="page-bd__choosebtn">教育</view>
+            <view class="page-bd__choosebtn">健康</view>
+            <view class="page-bd__choosebtn">生活</view>
+        </view>
+    </view>
+    <view class="page-ft">
+        <input type="text" value="星球简介(选填)"/>
+    </view>
 </view>

@@ -11,8 +11,11 @@ Page({
    * 完成创建 跳转到主页面
    */
   toMain: function(e) {
-    wx.navigateTo({
-      url:'../main'
+    wx.switchTab({
+      url:'../main',
+      complete: function(res) {
+        console.log(res);
+      }
     })
   },
   /**
