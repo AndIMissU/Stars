@@ -1,1 +1,79 @@
-/* pages/me/wallet/wallet.wxss */
+.container {
+    width: 100%;
+    height: 100vh;
+}
+.page-hd {
+    margin: auto;
+    width: 714rpx;
+    height: 336rpx;
+    border-top: 1px solid #bfbfbf;
+}
+.page-hd_title {
+    height: 80rpx;
+    text-align: center;
+    color: #bfbfbf;
+    font-size: 34rpx;
+    margin-top: 90rpx;
+}
+.page-hd_title image {
+    width: 47rpx;
+    height: 70rpx;
+}
+.page-hd_num {
+    text-align: center;
+    letter-spacing: 10rpx;
+    margin-top: 10rpx;
+    font-size: 56rpx;
+}
+.page-items {
+    width: 100%;
+    height: 218rpx;
+    background: white;
+}
+.page-item {
+    width: 100%;
+    height: 110rpx;
+    line-height: 110rpx;
+}
+.page-item_text {
+    font-size: 32rpx;
+    float: left;
+    margin-left: 50rpx;
+    color: #bfbfbf;
+}
+.page-item_num {
+    float: right;
+    color: #f78454;
+    margin-right: 30rpx;
+}
+.page-btn {
+    margin: auto;
+    margin-top: 40rpx;
+    width: 670rpx;
+    height: 97rpx;
+    color: white;
+    background: #9cdfd1;
+    text-align: center;
+    line-height: 97rpx;
+}
+.page-btn:hover {
+    background: #14B98F;
+}
+.page-btn-info {
+    margin: auto;
+    font-size: 24rpx;
+    margin-top: 10rpx;
+    width: 670rpx;
+    height: 40rpx;
+    color: #bfbfbf;
+    text-align: center;
+    line-height: 40rpx;
+}
+.page-ft {
+    width: 100%;
+    height: 50rpx;
+    margin-top: 350rpx;
+    text-align: center;
+    font-size: 34rpx;
+    color: #879aab;
+}
