@@ -26,11 +26,19 @@
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(2,402rpx);
     grid-gap: 56rpx;
-}
-.page__bd-create, .page_bd_stars{
+} 
+
+.page__bd-create {
     width: 289rpx;
     height: 402rpx;
-    border: 1rpx solid #edecee;
+    border: 2rpx solid #b9babe;
+    border-radius: 15rpx;
+}
+/* 没有show的样式： */
+.page_bd_stars {
+    width: 289rpx;
+    height: 402rpx;
+    border: 2rpx solid #b9babe;
     border-radius: 15rpx;
 }
 .page_bd_stars image {

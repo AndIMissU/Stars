@@ -1,3 +1,4 @@
+<import src="../starsList/starsList.wxml"/>
 <view class="container">
     <view class="page__hd center">
         <navigator>
@@ -8,13 +9,14 @@
         </navigator>
     </view>
     <view class="page__bd">
-        <block>
+        <block wx:if="{{display}}">
             <view class="page_bd_stars">
-                <image src="../../images/stars1.png"></image>
-                <view class="page_bd_starsName">哈哈哈</view>
-                <view class="page_bd_starsUser">哈哈哈</view>
+                <image src="{{newstars.starpic}}"></image>
+                <view class="page_bd_starsName">{{newstars.starname}}</view>
+                <view class="page_bd_starsUser">{{stars[0].userName}}</view>
             </view>
         </block>
+        <block wx:for="{{stars}}" wx:key="{{index}}"><template is="stars_list" data="{{...item}}"/></block>
         <view class="page__bd-create" bindtap="toCreateStar">  
             <view class="page__bd-create-text">创建星球</view>
         </view>

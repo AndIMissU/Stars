@@ -1,17 +1,44 @@
 // pages/main/main.js
+const app = getApp()
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
+    stars:[],
+    newstars:{
+      starname:'',
+      starpic:'',
+      type:''
+    },
+    showView:0,
+    display:false
   },
-
+  /**
+   * 获取星球信息
+   */
+  getStarsInfo: function(type) {
+    var that = this;
+    wx.request({
+      url:'https://www.easy-mock.com/mock/5a236208e27b936ea88bdb14/starsdata/getUserInfo#!method=get',
+      method:'GET',
+      data:{
+         type: type
+      },
+      success: function(res){
+        console.log(res);
+       var data = res.data.data[app.data.currentUser];
+        console.log(data);
+      //   console.log(data.name);
+        that.setData({
+          stars: data.stars
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+  this.getStarsInfo('');
+
   },
 
   /**
@@ -33,14 +60,32 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    var that = this;
+    wx.getStorage({
+      key: 'info',
+      success:function(res){
+        that.setData({
+          newstars:{
+            starname: res.data.starname,
+            starpic: res.data.starpic,
+            type:res.data.type
+          }
+        });
+      }
+    });
+    console.log(this.data.newstars.starname);
+
+    if(this.data.newstars.starname.length>0){
+      this.setData({
+        display:true  
+      });
+    }
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-  
   },
 
   /**
