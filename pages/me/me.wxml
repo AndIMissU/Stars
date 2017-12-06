@@ -39,7 +39,7 @@
                 <image src="../../images/email.png" />
                 <view class="bd-item-info">邀请码</view>
             </view>
-            <view class="bd-item">
+            <view class="bd-item" bindtap="toRank">
                 <image src="../../images/rank.png" />
                 <view class="bd-item-info">活跃星球排行榜</view>
             </view>

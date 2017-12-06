@@ -1,39 +1,18 @@
-// pages/me/myPush/myPush.js
-const app = getApp()
+// pages/me/ActiveStarsRank/ActiveStarsRank.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    name:'',
-    pic:''
+  
   },
-  getUserInfo:function(type) {
-    var that = this;
-    wx.request({
-      url:'https://www.easy-mock.com/mock/5a236208e27b936ea88bdb14/starsdata/getUserInfo#!method=get',
-      method:'GET',
-      data:{
-         type: type
-      },
-      success: function(res){
-        console.log(res);
-       var data = res.data.data[app.data.currentUser];
-        console.log(data);
-      //   console.log(data.name);
-        that.setData({
-          name: data.user.name,
-          pic: `../../${data.user.pic}`
-        })
-      }
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getUserInfo('');
+  
   },
 
   /**

@@ -1,17 +1,17 @@
 <view class="container">
     <view class="page-hd">
         <view class="page-hd_title"><image src="../../../images/money.png" />我的零钱</view>
-        <view class="page-hd_num">¥0</view>
+        <view class="page-hd_num">¥{{totalMoney}}</view>
     </view>
     <view class="page-bd">
         <view class="page-items">
             <view class="page-item">
                 <view class="page-item_text">可提现金额</view>
-                <view class="page-item_num">¥0.00</view>
+                <view class="page-item_num">¥{{operableMoney}}</view>
             </view>
             <view class="page-item">
                 <view class="page-item_text">待结算金额</view>
-                <view class="page-item_num">¥0.00</view>
+                <view class="page-item_num">¥{{setMoney}}</view>
             </view>
         </view>
         <view class="page-btn">提现</view>

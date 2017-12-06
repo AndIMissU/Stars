@@ -1,18 +1,44 @@
 // pages/me/wallet/wallet.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    totalMoney:0,
+    operableMoney:0,
+    setMoney:0
   },
-
+  /**
+   * 获取用户钱包信息
+   */
+  getWalletMoney: function (type) {
+    var that = this;
+    wx.request({
+      url:'https://www.easy-mock.com/mock/5a236208e27b936ea88bdb14/starsdata/getUserInfo#!method=get',
+      method:'GET',
+      data:{
+         type: type
+      },
+      success: function(res){
+        console.log(res);
+       var data = res.data.data[app.data.currentUser];
+        console.log(data);
+      //   console.log(data.name);
+        that.setData({
+          totalMoney: data.money.totalMoney,
+          operableMoney: data.money.operableMoney,
+          setMoney: data.money.setMoney
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    this.getWalletMoney('');
   },
 
   /**

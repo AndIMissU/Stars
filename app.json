@@ -1,17 +1,16 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/main/createStars/createStars",
     "pages/main/main",
-    
-
-    
-    "pages/me/wallet/wallet",
-    "pages/me/myPush/myPush",
+    "pages/main/createStars/createStars",
     "pages/me/me",
+    "pages/me/wallet/wallet",
+    "pages/index/index",
+    "pages/me/myPush/myPush",
     "pages/message/myMessage/myMessage",
     "pages/message/starsInfo/starsInfo",
-    "pages/message/message"
+    "pages/message/message",
+    "pages/starsList/starsList",
+    "pages/me/ActiveStarsRank/ActiveStarsRank"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,8 +1,8 @@
 <view class="container">
     <view class="page-hd">
         <view class="page-hd-info">
-            <view class="page-hd__pic"><image src="../../../images/pic.jpg"/></view>
-            <view class="page-hd__name">哈哈哈</view>
+            <view class="page-hd__pic"><image src="{{pic}}"/></view>
+            <view class="page-hd__name">{{name}}</view>
         </view>
         <view class="page-hd_mytopic">我的主题</view>
     </view>
