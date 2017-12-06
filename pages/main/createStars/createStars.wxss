@@ -66,14 +66,14 @@
     color: #a2a3a7;
     font-size: 26rpx;
 }
-.page-bd__choosebtn:active {
+/* .page-bd__choosebtn:active {
     background: #14b392;
     color: white;
-}
-.page-bd__choosebtn:hover {
+} */
+/* .page-bd__choosebtn:hover {
     background: #14b392;
     color: white;
-}
+} */
 .page-ft {
     margin: auto;
     margin-top: 40rpx;

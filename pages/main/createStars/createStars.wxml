@@ -4,23 +4,23 @@
         <view class="page-title__finish" bindtap="toMain">完成</view>
     </view>
     <view class="page-hd">
-        <view class="page-hd__star"><image src="../../../images/stars2.png"/></view>
-        <view class="page-hd__text"><input type="text" value="星球名字"/></view>
+        <view class="page-hd__star" bindtap="chooseImage"><image src="../../../images/stars4.png"/></view>
+        <view class="page-hd__text"><input bindinput="bindStarNameInput" type="text" placeholder="星球名字" value="{{starName}}"/></view>
     </view>
     <view class="page-bd">
         <view class="page-bd__text">选择所属星球类别(必选)</view>
         <view class="page-bd__choose">
-            <view class="page-bd__choosebtn">文艺</view>
-            <view class="page-bd__choosebtn">科技</view>
-            <view class="page-bd__choosebtn">时尚</view>
-            <view class="page-bd__choosebtn">娱乐</view>
-            <view class="page-bd__choosebtn">经济</view>
-            <view class="page-bd__choosebtn">教育</view>
-            <view class="page-bd__choosebtn">健康</view>
-            <view class="page-bd__choosebtn">生活</view>
+            <view class="page-bd__choosebtn" bindtap="chooseBtn1" style="background: {{color1}};color:{{textcolor1}}">文艺</view>
+            <view class="page-bd__choosebtn" bindtap="chooseBtn2" style="background: {{color2}};color:{{textcolor2}}">科技</view>
+            <view class="page-bd__choosebtn" bindtap="chooseBtn3" style="background: {{color3}};color:{{textcolor3}}">时尚</view>
+            <view class="page-bd__choosebtn" bindtap="chooseBtn4" style="background: {{color4}};color:{{textcolor4}}">娱乐</view>
+            <view class="page-bd__choosebtn" bindtap="chooseBtn5" style="background: {{color5}};color:{{textcolor5}}">经济</view>
+            <view class="page-bd__choosebtn" bindtap="chooseBtn6" style="background: {{color6}};color:{{textcolor6}}">教育</view>
+            <view class="page-bd__choosebtn" bindtap="chooseBtn7" style="background: {{color7}} ;color:{{textcolor7}}">健康</view>
+            <view class="page-bd__choosebtn" bindtap="chooseBtn8" style="background: {{color8}};color:{{textcolor8}}">生活</view>
         </view>
     </view>
     <view class="page-ft">
-        <input type="text" value="星球简介(选填)"/>
+        <input type="text" placeholder="星球简介(选填)"/>
     </view>
 </view>
