@@ -1,0 +1,7 @@
+<template name="stars_list">
+<view class="page_bd_stars">
+        <image src="{{starpic}}"></image>
+        <view class="page_bd_starsName">{{starname}}</view>
+        <view class="page_bd_starsUser">{{userName}}</view>
+    </view>
+</template>

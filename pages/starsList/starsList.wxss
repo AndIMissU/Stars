@@ -1,0 +1,32 @@
+.page_bd_stars{
+    width: 289rpx;
+    height: 402rpx;
+    border: 1rpx solid #edecee;
+    border-radius: 15rpx;
+}
+.page_bd_stars image {
+    margin: auto;
+    border-radius: 15rpx;
+    width: 289rpx;
+    height: 283rpx;
+}
+.page_bd_starsName {
+    text-align: center;
+    color: #525357;
+    font-size: 32rpx;
+}
+.page_bd_starsUser {
+    text-align: center;
+    font-size: 26rpx;
+    color: #76777b;
+    margin-top: 20rpx;
+}
+.page_bd_starsUser:before {
+    content: '';
+    position: absolute;
+    width: 70rpx;
+    height: 10rpx;
+    margin-top: -10rpx;
+    margin-left: 3rpx;
+    border-top: 1rpx solid #b9babe;
+}
