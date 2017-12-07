@@ -31,14 +31,14 @@
 .page__bd-create {
     width: 289rpx;
     height: 402rpx;
-    border: 2rpx solid #b9babe;
+    border: 2rpx solid #edecee;
     border-radius: 15rpx;
 }
 /* 没有show的样式： */
 .page_bd_stars {
     width: 289rpx;
     height: 402rpx;
-    border: 2rpx solid #b9babe;
+    border: 2rpx solid #edecee;
     border-radius: 15rpx;
 }
 .page_bd_stars image {
@@ -64,7 +64,7 @@
     width: 70rpx;
     height: 10rpx;
     margin-top: -10rpx;
-    margin-left: 3rpx;
+    margin-left: 4rpx;
     border-top: 1rpx solid #b9babe;
 }
 .page__bd-create{

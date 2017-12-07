@@ -9,10 +9,10 @@
         </navigator>
     </view>
     <view class="page__bd">
-        <block wx:if="{{display}}">
+        <block wx:if="{{display}}" wx:for="{{newstars}}" wx:key="{{index}}">
             <view class="page_bd_stars">
-                <image src="{{newstars.starpic}}"></image>
-                <view class="page_bd_starsName">{{newstars.starname}}</view>
+                <image src="{{item.starpic}}"></image>
+                <view class="page_bd_starsName">{{item.starName}}</view>
                 <view class="page_bd_starsUser">{{stars[0].userName}}</view>
             </view>
         </block>
