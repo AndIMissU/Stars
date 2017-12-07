@@ -40,16 +40,24 @@ Page({
          type: type
       },
       success: function(res){
-        console.log(res);
        var data = res.data.data[app.data.currentUser];
-        console.log(data);
-      //   console.log(data.name);
         that.setData({
           name: data.user.name,
           userPic: data.user.pic,
           starslen: data.stars.length,
           collectLen: data.collect.length
-        })
+        });
+        var newlen = that.data.starslen;
+        var it = that;
+        wx.getStorage({
+          key: 'info',
+          success:function(res){
+            newlen = res.data.length + it.data.starslen;
+            it.setData({
+              starslen: newlen
+            });
+          }
+        });
       }
     })
   },
@@ -64,6 +72,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+    
   
   },
 

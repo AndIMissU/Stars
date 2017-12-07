@@ -22,10 +22,7 @@ Page({
          type: type
       },
       success: function(res){
-        console.log(res);
        var data = res.data.data[app.data.currentUser];
-        console.log(data);
-      //   console.log(data.name);
         that.setData({
           totalMoney: data.money.totalMoney,
           operableMoney: data.money.operableMoney,

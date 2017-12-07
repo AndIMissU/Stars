@@ -18,10 +18,7 @@ Page({
          type: type
       },
       success: function(res){
-        console.log(res);
        var data = res.data.data[app.data.currentUser];
-        console.log(data);
-      //   console.log(data.name);
         that.setData({
           name: data.user.name,
           pic: `../../${data.user.pic}`
