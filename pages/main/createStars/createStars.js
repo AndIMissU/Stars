@@ -1,4 +1,3 @@
-// pages/main/creatStars/creatypears.js
 const app = getApp()
 Page({
 
@@ -7,13 +6,17 @@ Page({
    */
   data: {
     starname:'',
-    starpic:'',
+    starpic: '../../../images/stars1.png',
     type:0,
-    info:{
-      starname:'',
-      starpic:'',
-      type:''
-    },
+    info:[],
+    activeIndex: 1,
+    display: false,
+    show1:true,
+    show2:false,
+    show3:false,
+    show4:false,
+    show5:false,
+    show6:false,
     color1:'#f5f6f8',
     textcolor1:'#a2a3a7',
     color2:'#f5f6f8',
@@ -35,15 +38,100 @@ Page({
    * 选择图片
    */
   chooseImage: function(event){
-    console.log("hahhhhh");
+    this.setData({
+      display: true
+    });
+  },
+  /**
+   * 选择完成 关闭遮罩层
+   */
+  finishChoose: function(event) {
+    this.setData({
+      display: false
+    });
   },
   /**
    * 输入星球名字
    */
   bindStarNameInput:function(e) {
     this.setData({
-      starname:e.detail.value,
+      starname: e.detail.value,
     });
+  },
+  /**
+   * 选择要的背景图片
+   */
+  pic1: function(e) {
+    this.setData({
+      show1:true,
+      show2:false,
+      show3:false,
+      show4:false,
+      show5:false,
+      show6:false,
+      activeIndex: 1,
+      starpic: '../../../images/stars1.png'
+    })
+  },
+  pic2: function(e) {
+    this.setData({
+      show2:true,
+      show1:false,
+      show3:false,
+      show4:false,
+      show5:false,
+      show6:false,
+      activeIndex:2,
+      starpic: '../../../images/stars2.png'
+    })
+  },
+  pic3: function(e) {
+    this.setData({
+      show3:true,
+      show2:false,
+      show1:false,
+      show4:false,
+      show5:false,
+      show6:false,
+      activeIndex:3,
+      starpic: '../../../images/stars3.png'
+    })
+  },
+  pic4: function(e) {
+    this.setData({
+      show4:true,
+      show2:false,
+      show3:false,
+      show1:false,
+      show5:false,
+      show6:false,
+      activeIndex:4,
+      starpic: '../../../images/stars4.png'
+    })
+  },
+  pic5: function(e) {
+    this.setData({
+      show5:true,
+      show2:false,
+      show3:false,
+      show4:false,
+      show1:false,
+      show6:false,
+      activeIndex:5,
+      starpic: '../../../images/stars5.png'
+    })
+  },
+  pic6: function(e) {
+    this.setData({
+      show6:true,
+      show2:false,
+      show3:false,
+      show4:false,
+      show5:false,
+      show1:false,
+      activeIndex:6,
+      starpic: '../../../images/stars6.png'
+    })
   },
   /**
    * 更改选择的按钮的样式
@@ -236,7 +324,7 @@ Page({
    */
   toMain: function(e) {
     
-    if(this.data.starName === ''){
+    if(this.data.starName === " "){
       wx.showModal({
         content: '请输入星球名字',
         showCancel: false, //不显示取消按钮
@@ -249,22 +337,20 @@ Page({
         confirmText: '确定'
       })
     }else {
-      this.data.info.starname = this.data.starname;
-      this.data.info.starpic = "../../images/stars4.png";
-      this.data.info.type = this.data.type;
-      console.log(this.data.info);
+      var newinfo = [{}];
+      newinfo[0].starName = this.data.starname;
+      newinfo[0].starpic = this.data.starpic;
+      newinfo[0].type = this.data.type;
+      this.data.info = newinfo.concat(this.data.info);
       wx.setStorage({
         key: 'info',
         data: this.data.info,
         success:function(){
           wx.switchTab({
-            url:'../main',
-            complete: function(res) {
-              console.log(res);
-            }
+            url:'../main'
           });
         }
-    })
+    });
   }
     
   },
@@ -286,7 +372,15 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    var that = this;
+    wx.getStorage({
+      key: 'info',
+      success:function(res){
+        that.setData({
+          info:res.data
+        });
+      }
+    });
   },
 
   /**

@@ -1,6 +1,8 @@
 .container {
+    position: absolute;
     widows: 100%;
     height: 100vh;
+    z-index: 5;
 }
 .page-title {
     margin: auto;
@@ -88,4 +90,39 @@
     margin-top: 20rpx;
     margin-left: 30rpx;
     color: #a2a3a7;
+}
+.hiddenBack {
+    position: absolute;
+    z-index: 7;
+    background: black;
+    width: 100%;
+    height: 100vh;
+    opacity: .7;
+}
+.chooseBack {
+    position: absolute;
+    margin-top: 1024rpx;
+    z-index: 9;
+    width: 100%;
+    height: 183.3rpx;
+    background: white;
+    white-space: nowrap;
+    display: inline-block;
+}
+.backitem1 {
+    width: 161rpx;
+    height: 161rpx;
+    margin-top: 10rpx;
+    padding-left: 10rpx;
+    position: relative;
+}
+.active {
+    position: absolute;
+    width: 47.2rpx;
+    height: 47.2rpx;
+    margin-top: 70rpx;
+    margin-left: -100rpx;
+    background: white;
+    border-radius: 28.6rpx;
+
 }

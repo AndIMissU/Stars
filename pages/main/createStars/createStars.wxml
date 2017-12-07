@@ -1,10 +1,28 @@
+<view wx:if="{{display}}" class="hiddenBack" bindtap="finishChoose"></view>
+<scroll-view scroll-x wx:if="{{display}}" class="chooseBack">
+    <view class="backitem">
+        <image bindtap="pic1" class="backitem1" src="../../../images/stars1.png" />
+        <image wx:if="{{show1}}" class="{{activeIndex==1?'active':''}}" src="../../../images/this.png"/>
+
+        <image bindtap="pic2" class="backitem1" src="../../../images/stars2.png" />
+        <image wx:if="{{show2}}" class="{{activeIndex==2?'active':''}}" src="../../../images/this.png"/>
+        <image bindtap="pic3" class="backitem1" src="../../../images/stars3.png" />
+        <image wx:if="{{show3}}" class="{{activeIndex==3?'active':''}}" src="../../../images/this.png"/>
+        <image bindtap="pic4" class="backitem1" src="../../../images/stars4.png" />
+        <image wx:if="{{show4}}" class="{{activeIndex==4?'active':''}}" src="../../../images/this.png"/>
+        <image bindtap="pic5" class="backitem1" src="../../../images/stars5.png" />
+        <image wx:if="{{show5}}" class="{{activeIndex==5?'active':''}}" src="../../../images/this.png"/>
+        <image bindtap="pic6" class="backitem1" src="../../../images/stars6.png" />
+        <image wx:if="{{show6}}" class="{{activeIndex==6?'active':''}}" src="../../../images/this.png"/>
+    </view>
+</scroll-view>
 <view class="container">
     <view class="page-title">
         <view class="page-title__title">创建免费星球</view>
         <view class="page-title__finish" bindtap="toMain">完成</view>
     </view>
     <view class="page-hd">
-        <view class="page-hd__star" bindtap="chooseImage"><image src="../../../images/stars4.png"/></view>
+        <view class="page-hd__star" bindtap="chooseImage"><image src="{{starpic}}"/></view>
         <view class="page-hd__text"><input bindinput="bindStarNameInput" type="text" placeholder="星球名字" value="{{starName}}"/></view>
     </view>
     <view class="page-bd">
