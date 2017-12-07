@@ -1,7 +1,7 @@
 //app.js
 App({
   data:{
-    currentUser:1
+    currentUser:0
   },
   onLaunch: function () {
     // 展示本地存储能力

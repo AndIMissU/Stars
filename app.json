@@ -1,10 +1,10 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/main/main",
     "pages/main/createStars/createStars",
     "pages/me/me",
     "pages/me/wallet/wallet",
-    "pages/index/index",
     "pages/me/myPush/myPush",
     "pages/message/myMessage/myMessage",
     "pages/message/starsInfo/starsInfo",
