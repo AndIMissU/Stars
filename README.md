@@ -1,5 +1,5 @@
 # 仿知识星球
-###微信小程序 知识星球
+### 微信小程序 知识星球
 
 > 发现一款好好看的app 名字叫做知识星球 (虽然整款app除了绿色就还是绿色 但是还是好看啊) 不多扯 我开始说我的项目吧
 
@@ -12,7 +12,7 @@
 3. [Visual Studio Code](https://code.visualstudio.com)，这是写代码和看代码的编程软件，应该不陌生的（主要这款软件占用的内存小，需要用到什么可以下载安装，比一股脑儿全安装的方便实用吧）；
 4. [iconfont](http://www.iconfont.cn)，这是一个拥有我们平时用的图标的图标库，里面超级多的图片（虽然都是相似的，但是应该会有你想要的那一款）。
 
-###项目功能：
+### 项目功能：
 
 -  获取EasyMock的数据；
 -  个人页面显示用户信息（用户信息，星球信息，钱包信息）；
@@ -20,7 +20,7 @@
 -  首页星球的动态显示；
 -  初始页面到主页面的自动跳转。
 
-###具体功能解析：
+### 具体功能解析：
 
 1. 获取EasyMock的数据：
 
@@ -85,16 +85,18 @@
       **敲黑板的重点 2: （一定要设置遮罩层的z-index ，这个值要比要遮住的页面的z-index要大，这样才能完美的遮罩住）**
 
       以下是view的css样式：
+
         ```
-        .hiddenBack {
-          position: absolute;
-          z-index: 7;
-          background: black;
-          width: 100%;
-          height: 100vh;
-          opacity: .7;
-        }
-      ```
+          .hiddenBack {
+            position: absolute;
+            z-index: 7;
+            background: black;
+            width: 100%;
+            height: 100vh;
+            opacity: .7;
+          }
+        ```
+
     -  再在view里面加了一个wx: if="{{display}}"，当display为true时，遮罩层显示，反之则隐藏，所以同样的，view里面也加了一个点击事件，表示点击遮罩层时隐藏遮罩层，下面是js的代码：
 
       ```javascript
@@ -108,32 +110,34 @@
 
   -  scroll-view 设置
         
-    在遮罩层view外面添加一个scroll-view，这个也是同遮罩层一起显示的：
+    -  在遮罩层view外面添加一个scroll-view，这个也是同遮罩层一起显示的：
 
-    **小细节1 : 要想scroll-view横向滑动，就应该在scroll-view里面添加一句 scroll-x，同样的，纵向滑动就是 scroll-y ，还有就是scroll-view阻止了页面回弹，就无法使用onPullDownRefresh了**
-    ```
-      <scroll-view scroll-x wx:if="{{display}}" class="chooseBack">
-        ......     
-      </scroll-view>
-    ```
+      **小细节1 : 要想scroll-view横向滑动，就应该在scroll-view里面添加一句 scroll-x，同样的，纵向滑动就是 scroll-y ，还有就是scroll-view阻止了页面回弹，就无法使用onPullDownRefresh了**
+
+      ```
+        <scroll-view scroll-x wx:if="{{display}}" class="chooseBack">
+          ......     
+        </scroll-view>
+      ```
         
-    scroll-view的css样式（由于我这个scroll-view是要显示在遮罩层的上方，所以z-index的值比遮罩层的值大）
-    ```
-      .chooseBack {
-        position: absolute;
-        margin-top: 1024rpx;
-        z-index: 9;
-        width: 100%;
-        height: 183.3rpx;
-        background: white;
-        white-space: nowrap;
-        display: inline-block;
-      }
-    ```
+    -  scroll-view的css样式（由于我这个scroll-view是要显示在遮罩层的上方，所以z-index的值比遮罩层的值大）
+    
+      ```
+        .chooseBack {
+          position: absolute;
+          margin-top: 1024rpx;
+          z-index: 9;
+          width: 100%;
+          height: 183.3rpx;
+          background: white;
+          white-space: nowrap;
+          display: inline-block;
+        }
+      ```
   -  弹窗设置
 
-    当我们创建星球时，输入的名字为空或者星球的属性没有填入，这时候就需要一个弹窗来提示我们什么东西没有填入 .
-    一开始我是想用icon提示的，然后写入了如下代码：
+    -  当我们创建星球时，输入的名字为空或者星球的属性没有填入，这时候就需要一个弹窗来提示我们什么东西没有填入 .
+    -  一开始我是想用icon提示的，然后写入了如下代码：
       ```javascript
         wx.showToast({
           title:'请输入星球名字',
@@ -141,32 +145,32 @@
           duration: 2000
         });
       ```
-    然后发现icon一直都是success的那个图片我就换了另外一种方式
+    -  然后发现icon一直都是success的那个图片我就换了另外一种方式
 
-    **敲黑板的重点3 : 微信小程序showToast这个提供的只有success和loading这两个icon，想用其他的只能自己提供图片吧，这个是看API看出来的，一定要认真仔细的看API！！！**
+      **敲黑板的重点3 : 微信小程序showToast这个提供的只有success和loading这两个icon，想用其他的只能自己提供图片吧，这个是看API看出来的，一定要认真仔细的看API！！！**
 
-    我换成了showModal 这样能让用户更清楚的知道自己哪些信息没有填写
-    
-    ```javascript
-      wx.showModal({
-        content: '请选择星球属性',
-        showCancel: false,     //不显示取消按钮
-        confirmText: '确定'
-      });
-    ```
+    -  我换成了showModal 这样能让用户更清楚的知道自己哪些信息没有填写
+      ```javascript
+        wx.showModal({
+          content: '请选择星球属性',
+          showCancel: false,     //不显示取消按钮
+          confirmText: '确定'
+        });
+      ```
   -  本地存储
     
-    本地存储是一个很重要的也很方便的东西，比如说我们听歌时会缓存一些歌到自己的手机还有离线东西都是可以让我们更快的得到数据。
+    -  本地存储是一个很重要的也很方便的东西，比如说我们听歌时会缓存一些歌到自己的手机还有离线东西都是可以让我们更快的得到数据。
 
-    创建星球是需要一些东西，比如星球名字、星球背景、星球所属的用户和星球的简介(选填)，这些可能都是要存到本地存储的，然后再在其他页面获取。
+    -  创建星球是需要一些东西，比如星球名字、星球背景、星球所属的用户和星球的简介(选填)，这些可能都是要存到本地存储的，然后再在其他页面获取。
 
-    **思路：**
-    首先我想到的是传多个值到storage里面去，这样就可能设置多个key，然而每个key都只放一个数据就显得很繁琐和浪费空间，于是就想到了传一个对象过去，发现省了很多事，但是又出问题了，每次新建时都是改的同一个对象，也就是说只能创建一个对象，并且这个对象在下次创建时会被新的数据更改掉，最后想到了数组，可以用push的方法把每次新创建的星球信息push进原来的数组，于是就解决了本地存储出现的问题了。
+      **思路：**
+      -  首先我想到的是传多个值到storage里面去，这样就可能设置多个key，然而每个key都只放一个数据就显得很繁琐和浪费空间，于是就想到了传一个对象过去，发现省了很多事，但是又出问题了，每次新建时都是改的同一个对象，也就是说只能创建一个对象，并且这个对象在下次创建时会被新的数据更改掉，最后想到了数组，可以用push的方法把每次新创建的星球信息push进原来的数组，于是就解决了本地存储出现的问题了。
 
-    **实现过程：**
+      **实现过程：**
       -  写入setStorage方法，将新设的数组传入原有的数组
 
         **敲黑板的重点 4 ：微信小程序好像不支持push，用push的时候一直报错，于是我就用concat了。concat也是可以插入数据的，但是concat不能改变原数组，所以需要将concat后的数组赋值给原数组。push是属于另外一个派别的，它可以直接改变原数组**
+
         ```
           var newinfo = [{}];
           newinfo[0].starName = this.data.starname;
@@ -198,6 +202,7 @@
               });
             }
         ```
+        
       **敲黑板的重点 5 ：微信小程序页面加载函数的顺序：**
         -  首先是onLoad函数
         -  再是onReady函数
