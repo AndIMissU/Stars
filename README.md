@@ -69,7 +69,6 @@
   ```
 3. 创建星球页面的遮罩设置、scroll-view、弹窗以及本地存储：
   - 遮罩层设置
-
     -  首先在wxml里面添加一个铺满整个页面的view
 
       **敲黑板的重点 1：（当有东西和遮罩层一起显示时，则需要将该东西放在遮罩层的view的外面，不然这个东西也会被遮罩层里设置的透明度所影响）**
@@ -98,7 +97,6 @@
         ```
 
     -  再在view里面加了一个wx: if="{{display}}"，当display为true时，遮罩层显示，反之则隐藏，所以同样的，view里面也加了一个点击事件，表示点击遮罩层时隐藏遮罩层，下面是js的代码：
-
       ```javascript
         /* 选择完成 关闭遮罩层 */
         finishChoose: function(event) {
@@ -107,9 +105,9 @@
           });
         }
       ```
-
   -  scroll-view 设置
     -  在遮罩层view外面添加一个scroll-view，这个也是同遮罩层一起显示的：
+
       **小细节1 : 要想scroll-view横向滑动，就应该在scroll-view里面添加一句 scroll-x，同样的，纵向滑动就是 scroll-y ，还有就是scroll-view阻止了页面回弹，就无法使用onPullDownRefresh了**
 
       ```
@@ -117,6 +115,7 @@
           ......     
         </scroll-view>
       ```
+      
     -  scroll-view的css样式（由于我这个scroll-view是要显示在遮罩层的上方，所以z-index的值比遮罩层的值大）
       ```
         .chooseBack {
